@@ -1,0 +1,26 @@
+#Imports
+import random
+import time
+
+#Storybuilding
+
+print("Welcome to TBDGTIDNFLN, which is a long-winded acronym that you can figure out if you feel so inclined")
+input("When you are ready to begin, please type, 'START' >> ")
+time.sleep(1)
+print("You wake up in a dark and dusty room")
+time.sleep(1.5)
+print("Afraid and alone, you start running, you run until you reach the end of a hall")
+time.sleep(2)
+print("At the end of a hall, you find a baby blue ceramic figure. It's around 6,'5"", it's very skinny, almost in the shape of a vortex towards the bottom.")
+time.sleep(4)
+print("A wave of sinister energy washes over the room, you no longer feel comfortable and begin to run.")
+time.sleep(2)
+print("You turn around and start running from whence you came. You look to your right, and you see an old man, seemingly in his 80s or so.")
+time.sleep(3)
+print("even being so old, he's matching your sprint step for step")
+time.sleep(2)
+print("You reach the exact spot you woke up and you stop your sprint. There's no other way to go in the entire room. You finally work up the courage to ask the old man where to go.")
+time.sleep(5)
+print("He says nothing, never even bats an eye at you. He simply points to his right, where a wall collapses revealing a massive sprawling dungeon underneath you.")
+time.sleep(4)
+print("After looking for a moment, you look back at the man, but he's no where to be seen.")

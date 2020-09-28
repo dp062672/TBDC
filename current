@@ -1,0 +1,202 @@
+#Imports
+import random
+import time
+
+#Storybuilding
+
+print("Welcome to TBDGTIDNFLN, which is a long-winded acronym that you can figure out if you feel so inclined")
+print(" ")
+input("When you are ready to begin, please type, 'START' >> ")
+time.sleep(1)
+print(" ")
+print("You wake up in a dark and dusty room")
+time.sleep(1.5)
+print(" ")
+print("Afraid and alone, you start running, you run until you reach the end of a hall")
+time.sleep(2)
+print(" ")
+print("At the end of a hall, you find a baby blue ceramic figure. It's around 6,'5"", it's very skinny, almost in the shape of a vortex towards the bottom.")
+time.sleep(2.5)
+print(" ")
+print("A wave of sinister energy washes over the room, you no longer feel comfortable and begin to run.")
+time.sleep(2)
+print(" ")
+print("You turn around and start running from whence you came. You look to your right, and you see an old man, seemingly in his 80s or so.")
+time.sleep(3)
+print(" ")
+print("even being so old, he's matching your sprint step for step")
+time.sleep(2)
+print(" ")
+print("You reach the exact spot you woke up and you stop your sprint. There's no other way to go in the entire room. You finally work up the courage to ask the old man where to go.")
+time.sleep(5)
+print(" ")
+print("He says nothing, never even bats an eye at you. He simply points to his right, where a wall collapses revealing a massive sprawling dungeon underneath you.")
+time.sleep(4)
+print(" ")
+print("After looking for a moment, you look back at the man, but he's no where to be seen.")
+
+#Creating Variables and Values
+
+health = 100
+name = input("What is your name? >> ")
+exp = 0
+level = 0
+strength = 0
+intel = 0
+stamina = 0
+time1 = 0000
+inv = []
+equip = []
+print(" ")
+print("To begin, you will be given 5 skill points to distribute among the skills, Strength, Intelligence and Stamina.")
+time.sleep(3)
+
+#Assign Strength
+
+loop = True
+while loop == True:
+	print(" ")
+	strength = int(input("How many points would you like put in strength? >> "))
+	if strength + intel + stamina > 5:
+		time.sleep(1.5)
+		print(" ")
+		print("That is too many points, please try again")
+		time.sleep(2)
+		strength = 0
+	else:
+		loop = False
+
+#Assign Intelligence
+
+loop = True
+while loop == True:
+	print(" ")
+	intel = int(input("How many points would you like put in itelligence? >> "))
+	if strength + intel + stamina > 5:
+		time.sleep(1.5)
+		print(" ")
+		print("That is too many points, please try again")
+		time.sleep(2)
+		intel = 0
+	else:
+		loop = False
+
+#Assign Stamina
+
+loop = True
+while loop == True:
+	print(" ")
+	stamina = int(input("How many points would you like put in stamina? >> "))
+	if strength + intel + stamina > 5:
+		time.sleep(1.5)
+		print(" ")
+		print("That is too many points, please try again")
+		time.sleep(2)
+		stamina = 0
+	else:
+		loop = False
+
+#Picking a Gift
+print(" ")
+print("Pick a gift to use on your journey, pick carefully as any of these gifts will be very useful in their own ways")
+time.sleep(2)
+print(" ")
+print("1. Bombs of Grey")
+gift1 = "Bombs of Grey"
+print("2. Master Key")
+gift2 = "Master Key"
+print("3. Holy Water")
+gift3 = "Holy Water"
+print("4. Pendant of a Dwarf")
+gift4 = "Pendant of a Dwarf"
+print("5. Ring of Favor")
+gift5 = "Ring of Favor"
+time.sleep(3)
+print(" ")
+print("To get info on a gift, type the number followed by, 'INFO'")
+gchoi = True
+while gchoi == True:
+	time.sleep(1.5)
+	print(" ")
+	zcv = input("What gift you would like to choose or know more about? >> ")
+
+	#Gift Info
+
+	#Bombs of Grey
+	if zcv == "1 INFO":
+		time.sleep(1)
+		print(" ")
+		print("Bombs of Grey is high damage consumable item. 	Strength does not affect the damage outcome. Gift grants 2.")
+
+	#Master Key
+
+	elif zcv == "2 INFO":
+		time.sleep(1)
+		print(" ")
+		print("Master key will open most basic locks found throughout the dungeon. Item is not consumed upon use.")
+
+	#Holy Water
+
+	elif zcv == "3 INFO":
+		time.sleep(1)
+		print(" ")
+		print("Holy Water is a consumable item with passive effects. Holy Water can be consumed to restore health or deal great damage to enemies in the demon class. It will passively reduce the spawn of enemies.")
+
+	#Pendant of a Dwarf
+
+	elif zcv == "4 INFO":
+		time.sleep(1)
+		print(" ")
+		print("Pendant of a Dwarf is an equippable enchanted item that slightly increases EXP gain.")
+
+	#Ring of Favor
+
+	elif zcv == "5 INFO":
+		time.sleep(1)
+		print(" ")
+		print("Ring of Favor is an equippable ring that slightly increases health and grants slight health regeneration.")
+
+#Gift Info
+
+#Bombs of Grey
+	elif zcv == "1":
+		print("You have chosen Bombs of Grey!")
+		time.sleep(1.5)
+		print("Bombs of Grey has been added to your inventory")
+		inv.append(gift1)
+		gchoi = False
+
+#Master Key
+	elif zcv == "2":
+		print("You have chosen Master Key!")
+		time.sleep(1.5)
+		print("Master Key has been added to your inventory")
+		inv.append(gift2)
+		gchoi = False
+
+#Holy Water
+	elif zcv == "3":
+		print("You have chosen Holy Water!")
+		time.sleep(1.5)
+		print("Holy Water has been added to your inventory")
+		inv.append(gift3)
+		gchoi = False
+
+#Pendant of a Dwarf
+	elif zcv == "4":
+		print("You have chosen Pendant of a Dwarf!")
+		time.sleep(1.5)
+		print("Pendant of a Dwarf has been added to your inventory")
+		inv.append(gift4)
+		gchoi = False
+#Ring of Favor
+	elif zcv == "5":
+		print("You have chosen Ring of Favor!")
+		time.sleep(1.5)
+		print("Ring of Favor has been added to your inventory")
+		inv.append(gift5)
+		gchoi = False
+
+#Fight Mechanics
+
+#Floor/Room Mechanics

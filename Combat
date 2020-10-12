@@ -1,0 +1,250 @@
+#Imports
+import random
+import time
+
+#Storybuilding
+
+print("Welcome to TBDGTIDNFLN, which is a long-winded acronym that you can figure out if you feel so inclined")
+print(" ")
+input("When you are ready to begin, please type, 'START' >> ")
+time.sleep(1)
+print(" ")
+print("You wake up in a dark and dusty room")
+time.sleep(1.5)
+print(" ")
+print("Afraid and alone, you start running, you run until you reach the end of a hall")
+time.sleep(2)
+print(" ")
+print("At the end of a hall, you find a baby blue ceramic figure. It's around 6,'5"", it's very skinny, almost in the shape of a vortex towards the bottom.")
+time.sleep(2.5)
+print(" ")
+print("A wave of sinister energy washes over the room, you no longer feel comfortable and begin to run.")
+time.sleep(2)
+print(" ")
+print("You turn around and start running from whence you came. You look to your right, and you see an old man, seemingly in his 80s or so.")
+time.sleep(3)
+print(" ")
+print("even being so old, he's matching your sprint step for step")
+time.sleep(2)
+print(" ")
+print("You reach the exact spot you woke up and you stop your sprint. There's no other way to go in the entire room. You finally work up the courage to ask the old man where to go.")
+time.sleep(5)
+print(" ")
+print("He says nothing, never even bats an eye at you. He simply points to his right, where a wall collapses revealing a massive sprawling dungeon underneath you.")
+time.sleep(4)
+print(" ")
+print("After looking for a moment, you look back at the man, but he's no where to be seen.")
+
+#Creating Variables and Values
+
+health = 100
+name = input("What is your name? >> ")
+exp = 0
+level = 5
+strength = 0
+tstrength = strength * 10
+intel = 0
+stamina = 0
+inv = []
+weapeq = ["fist", 20]
+weapona = weapeq[2]
+defeq = ["worn shirt", 10]
+daf = [2]
+print(" ")
+print("To begin, you will be given 5 skill points to distribute among the skills, Strength, Intelligence and Stamina.")
+time.sleep(3)
+
+#Assign Strength
+
+loop = True
+while loop == True:
+	print(" ")
+	strength = int(input("How many points would you like put in strength? >> "))
+	if strength + intel + stamina > 5:
+		time.sleep(1.5)
+		print(" ")
+		print("That is too many points, please try again")
+		time.sleep(2)
+		strength = 0
+	else:
+		loop = False
+
+#Assign Intelligence
+
+loop = True
+while loop == True:
+	print(" ")
+	intel = int(input("How many points would you like put in itelligence? >> "))
+	if strength + intel + stamina > 5:
+		time.sleep(1.5)
+		print(" ")
+		print("That is too many points, please try again")
+		time.sleep(2)
+		intel = 0
+	else:
+		loop = False
+
+#Assign Stamina
+
+loop = True
+while loop == True:
+	print(" ")
+	stamina = int(input("How many points would you like put in stamina? >> "))
+	if strength + intel + stamina > 5:
+		time.sleep(1.5)
+		print(" ")
+		print("That is too many points, please try again")
+		time.sleep(2)
+		stamina = 0
+	else:
+		loop = False
+
+#Picking a Gift
+print(" ")
+print("Pick a gift to use on your journey, pick carefully as any of these gifts will be very useful in their own ways")
+time.sleep(2)
+print(" ")
+print("1. Bombs of Grey")
+gift1 = "Bombs of Grey"
+print("2. Holy Water")
+gift2 = "Holy Water"
+print("3. Pendant of a Dwarf")
+gift3 = "Pendant of a Dwarf"
+print("4. Ring of Favor")
+gift4 = "Ring of Favor"
+time.sleep(3)
+print(" ")
+print("To get info on a gift, type the number followed by, 'INFO'")
+gchoi = True
+while gchoi == True:
+	time.sleep(1.5)
+	print(" ")
+	zcv = input("What gift you would like to choose or know more about? >> ")
+
+	#Gift Info
+
+	#Bombs of Grey
+	if zcv == "1 INFO":
+		time.sleep(1)
+		print(" ")
+		print("Bombs of Grey is high damage consumable item. 	Strength does not affect the damage outcome. Gift grants 2.")
+
+	#Holy Water
+
+	elif zcv == "2 INFO":
+		time.sleep(1)
+		print(" ")
+		print("Holy Water is a consumable item with passive effects. Holy Water can be consumed to restore health.")
+
+	#Pendant of a Dwarf
+
+	elif zcv == "3 INFO":
+		time.sleep(1)
+		print(" ")
+		print("Pendant of a Dwarf is an equippable enchanted item that slightly increases EXP gain.")
+
+	#Ring of Favor
+
+	elif zcv == "4 INFO":
+		time.sleep(1)
+		print(" ")
+		print("Ring of Favor is an equippable ring that slightly increases health and grants slight health regeneration.")
+
+#Gift Info
+
+#Bombs of Grey
+	elif zcv == "1":
+		print("You have chosen Bombs of Grey!")
+		time.sleep(1.5)
+		print("Bombs of Grey has been added to your inventory")
+		inv.append[gift1, "DAMAGE", 50]
+		gchoi = False
+
+#Holy Water
+	elif zcv == "2":
+		print("You have chosen Holy Water!")
+		time.sleep(1.5)
+		print("Holy Water has been added to your inventory")
+		inv.append[gift4, "HEALING", 50]
+		gchoi = False
+
+#Pendant of a Dwarf
+	elif zcv == "3":
+		print("You have chosen Pendant of a Dwarf!")
+		time.sleep(1.5)
+		print("Pendant of a Dwarf has been added to your inventory")
+		inv.append(gift4)
+		gchoi = False
+#Ring of Favor
+	elif zcv == "4":
+		print("You have chosen Ring of Favor!")
+		time.sleep(1.5)
+		print("Ring of Favor has been added to your inventory")
+		inv.append(gift4)
+		gchoi = False
+
+#Fight Mechanics
+
+def fightf(enemyl, enemy, enemya, enemyd, enemyh):
+	global health
+	print("You are being approached by", enemy)
+	time.sleep(2)
+	while health > 0 and enemyh > 0:
+		print("1. Attack")
+		print("2. Use Item")
+		print("3. Flee")
+		turn = int(input("What will you do?"))
+		if turn == 1:
+			rinput = random.randint(232, 255)
+			damage = ((((((((2*level/5+2)*strength*weapona)/enemyd)/50)+2)*1)/10)*rinput)/255
+			enemyh = enemyh - damage
+			print("The enemy is now at", enemyh, " hp!")
+			rinput = random.randint(232, 255)
+			rdenemy = random.randint(5*enemyl, 6*enemyl)
+			damage = ((((((((2*level/5+2)*enemya*rdenemy)/daf)/50)+2)*1)/10)*rinput)/255
+			health = health - damage
+			print("You are now at", health, " hp!")
+			damage = 0
+		elif turn == 2:
+			print(inv[1[1]], inv[2[1]], inv[3[1]], inv[4[1]])
+			tchoi = int(input("What item would you like to use?"))
+			if tchoi == 1:
+				if inv[1[2]] == "HEALING":
+					health = health + inv[1[3]]
+				elif inv[1[2]] == "DAMAGE":
+					enemyh = enemyh - [1[3]]
+			elif tchoi == 2:
+				if inv[2[2]] == "HEALING":
+					health = health + inv[2[3]]
+				elif inv[2[2]] == "DAMAGE":
+					enemyh = enemyh - [2[3]]
+			elif tchoi == 3:
+				if inv[3[2]] == "HEALING":
+					health = health + inv[3[3]]
+				elif inv[3[2]] == "DAMAGE":
+					enemyh = enemyh - [3[3]]
+			rinput = random.randint(232, 255)
+			rdenemy = random.randint(5*enemyl, 6*enemyl)
+			damage = ((((((((2*level/5+2)*enemya*rdenemy)/daf)/50)+2)*1)/10)*rinput)/255
+			health = health - damage
+			print("You are now at", health, " hp!")
+			damage = 0
+		elif turn ==3:
+			rc = random.randint(1,100)
+			if rc > 79:
+				break
+			else:
+				print("You tried to run, but it failed!")
+				rinput = random.randint(232, 255)
+				rdenemy = random.randint(5*enemyl, 6*enemyl)
+				damage = ((((((((2*level/5+2)*enemya*rdenemy)/daf)/50)+2)*1)/10)*rinput)/255
+				health = health - damage
+				print("You are now at", health, " hp!")
+				damage = 0
+	if enemyh == 0:
+		print("You win!")
+		global exp
+		exp = exp + 20
+	elif health == 0:
+		while health == 0:
+			print("You died")
